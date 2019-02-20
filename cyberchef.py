@@ -24,7 +24,7 @@ def cyberchef(input, recipe=''):
   service_args=['--verbose']
 
   driver = webdriver.Chrome(
-    executable_path = '/usr/local/bin/chromedriver',
+    executable_path = WEBDRIVERPATH,
     chrome_options  = options,
     service_log_path= service_log_path,
     service_args    = service_args
