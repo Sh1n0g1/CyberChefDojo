@@ -37,8 +37,6 @@ def cyberchef(input, recipe=''):
 
 recipe='''XOR({'option':'Hex','string':'01'},'Standard',false)'''
 input='udru032'
-success_flag=True
-
 print cyberchef(input, recipe) # 'test123'
 
 
