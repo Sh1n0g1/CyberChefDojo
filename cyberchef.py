@@ -1,6 +1,6 @@
 #Run CyberChef from Python using Selenium + Headless Chrome
 
-#What you need:
+# requirement:
 # selenium (pip install selenium)
 # google-chrome (apt install google-chrome)
 # chrome web driver (http://chromedriver.chromium.org/downloads)
@@ -14,20 +14,13 @@ CYBERCHEF_URL='https://gchq.github.io/CyberChef/'
 
 def cyberchef(input, recipe=''):
   input=input.encode('base64').replace('=','')
-
-
   options=Options()
   options.add_argument('--headless')
   options.add_argument('--disable-gpu')
   options.add_argument('--no-sandbox')
-  service_log_path='/var/log/chromedriver.log'
-  service_args=['--verbose']
-
   driver = webdriver.Chrome(
     executable_path = WEBDRIVERPATH,
-    chrome_options  = options,
-    service_log_path= service_log_path,
-    service_args    = service_args
+    chrome_options  = options
   )
 
   url=CYBERCHEF_URL+'#input='+input
